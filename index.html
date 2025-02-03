@@ -43,7 +43,7 @@
             50% { opacity: 0.3; }
         }
 
-        /* Center Content */
+        /* Centered Content */
         .container {
             position: absolute;
             top: 50%;
@@ -51,22 +51,16 @@
             transform: translate(-50%, -50%);
         }
 
-        /* Get Started Button */
-        .btn {
-            background: #ff9800;
-            padding: 12px 24px;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            color: white;
-            border-radius: 5px;
-            animation: ring 1.5s infinite;
+        /* Link Styling */
+        .link {
+            font-size: 20px;
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        @keyframes ring {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        .link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -92,9 +86,7 @@
 
     <!-- Main Content -->
     <div class="container">
-        <h1>Welcome to My Web App</h1>
-        <p>Click below to get started.</p>
-        <button class="btn" onclick="openGemini()">Get Started</button>
+        <a href="https://gemini.google.com/app" class="link">get started</a>
     </div>
 
     <script>
@@ -108,11 +100,6 @@
                 document.getElementById("loading").style.display = "none";
             }
         }, 100);
-
-        // Open Google Gemini
-        function openGemini() {
-            window.open("https://gemini.google.com/app", "_blank");
-        }
     </script>
 
 </body>
